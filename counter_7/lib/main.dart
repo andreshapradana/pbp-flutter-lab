@@ -103,6 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         floatingActionButton: Stack(
           children: [
+            if (_counter>0)
             Positioned(
               left: 40,
               bottom: 10,
