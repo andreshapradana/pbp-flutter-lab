@@ -157,3 +157,23 @@ class _MyDataPageState extends State<MyDataPage> {
   }
 }
 ```
+
+# Tugas 9
+-  Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON? <br>
+Kita dapat mengambil data JSON dan menyimpannya pada suatu variabel tanpa melakukan mapping di model. Hal tersebut tidak lebih baik karena model dapat membantu dengan menampung data dalam sebuah list yang bertipe class model tersebut.<br>
+- Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. <br>
+Widget utama yang digunakan adalah future builder untuk mengolah data hasil konversi dari JSON. Async untuk menerima dan proses http response json. Column, align, dan padding untuk pengaturan layout. Widget text untuk memodfikasi font. Appbar widget untuk menampilkan hamburger drawer untuk navigasi halaman. <br>
+- Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter. <br>
+1. Membuat sebuah model untuk penampungan data dalam sebuah objek dan juga list bertipe objek.
+2. Menambahkan package http dan menambahkan potongan kode pada `android/app/src/main/AndroidManifest.xml`
+3. Membuat sebuah list yang dihubungkan ke dalam FutureBuilder untuk dimasukkan object ke dalam list dengan HTTP
+4. Melakukan render dan menampilkan data yang sudah dikonversi dengan widget future builder
+- Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
+1. Melakukan refactor code dengan menambah folder model dan page
+2. Membuat model menggunakan website Quicktype
+3. Melakukan perintah `flutter pub add http` dan menambahkan potongan kode pada `android/app/src/main/AndroidManifest.xml`
+4. Menampilkan judul film menggunakan future builder dan menyimpan field agar diproses pada halaman details
+5. Menambahkan textbutton agar saat ditekan akan navigasi ke halaman detail
+6. Get field yang disimpan lalu menampilkan informasi film yang ditekan
+7. Menambahkan tombol kembali pada halaman detail dengan textbutton
+
